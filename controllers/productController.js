@@ -43,14 +43,14 @@ exports.create_post = [
 ];
 
 exports.delete_get = asyncHandler(async function(req, res, next) {
-    const variant = await Product.find({ product: req.params.id })
+    const variant = await Product.findById({ product: req.params.id })
     res.json(variant);
 });
 
 exports.delete_post = asyncHandler(async function(req, res, next) {
-    const Variant =await Variant.find({ product: req.params.id });
-    for (let i = 0; i < Variant.length; i++) {
-        await Variant.findByIdAndRemove(Variant[i]._id);
+    const variant =await Variant.find({ product: req.params.id });
+    for (let i = 0; i < variant.length; i++) {
+        await Variant.findByIdAndRemove(variant[i]._id);
     }
     await Product.findByIdAndRemove(req.params.id);
     res.redirect('/api');
