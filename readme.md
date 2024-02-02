@@ -54,32 +54,47 @@ API endpoints Description:
 
 ## Architectural Decisions
 
-Describe the architectural decisions made in the project. Why you chose certain technologies, patterns, etc.
+- made using model view controll design.
+- user Jest SuperTest to test Api endpoints.
+- Postman was used to check for api payloads and responses.
+- file populatedb.js is used to populate the db with some data.
+- MongoDb was used for data storage and collection.
+- Mongo memory server  was used to check for model errors.
+- array of variants was used in products array instead of product id in every variant to reduce access times, and make the api faster.
+- express validator used to validate response data and send error codes.
+- async event handler used to fetch data asynchronously.
+- test.js used to test the api endpoints using Jest/ SuperTest
 
-## Assumptions
-
-List any assumptions that were made while developing the project.
 
 ## Other Instructions
 
-Any other necessary instructions go here.
+change mongodb url to your mongodb url
 
 ## Built With
 
-* [Express](https://expressjs.com/) - The web framework used
-* [Morgan](https://www.npmjs.com/package/morgan) - HTTP request logger middleware for node.js
-* [Pug](https://pugjs.org/api/getting-started.html) - Template engine for Node.js
+This project uses these dependencies:
+
+- [Node.js](https://nodejs.org/en/) - JavaScript runtime
+- [async-handler](https://www.npmjs.com/package/express-async-handler) - Middleware for handling exceptions inside of async express routes
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser) - Middleware which parses cookies attached to the client request object
+- [debug](https://www.npmjs.com/package/debug) - A tiny JavaScript debugging utility modelled after Node.js core's debugging technique
+- [express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
+- [express-async-handler](https://www.npmjs.com/package/express-async-handler) - Middleware for handling exceptions inside of async express routes
+- [express-validator](https://express-validator.github.io/docs/) - An express.js middleware for validator.js.
+- [http-errors](https://www.npmjs.com/package/http-errors) - Create HTTP error objects
+- [mongodb](https://www.mongodb.com/) - The MongoDB Database
+- [mongoose](https://mongoosejs.com/) - Elegant mongodb object modeling for node.js
+- [morgan](https://www.npmjs.com/package/morgan) - HTTP request logger middleware for node.js
+- [pug](https://pugjs.org/api/getting-started.html) - High-performance template engine
+
+This project uses these devDependencies:
+
+- [jest](https://jestjs.io/) - Delightful JavaScript Testing
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourGithubUsername](https://github.com/YourGithubUsername)
+* **Aditya Sharma** - *sigh* - [Annihilator544](https://github.com/Annihilator544)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
