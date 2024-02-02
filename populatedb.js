@@ -28,11 +28,11 @@ async function main() {
 
 async function createVariants() {
     console.log("Debug: Creating Variants");
-    await VariantCreate('Variant 1', 'SKU1', 10, 100);
-    await VariantCreate('Variant 2', 'SKU2', 20, 200);
-    await VariantCreate('Variant 3', 'SKU3', 30, 300);
-    await VariantCreate('Variant 4', 'SKU4', 40, 400);
-    await VariantCreate('Variant 5', 'SKU5', 50, 500);
+    await VariantCreate('Variant 6', 'SKU6', 10, 100);
+    await VariantCreate('Variant 7', 'SKU7', 20, 200);
+    await VariantCreate('Variant 8', 'SKU8', 30, 300);
+    await VariantCreate('Variant 9', 'SKU9', 40, 400);
+    await VariantCreate('Variant 10', 'SKU10', 50, 500);
     console.log("Debug: Variants created");
 }
 
@@ -45,9 +45,10 @@ async function VariantCreate(name, SKU, additionalCost, stockCount) {
 
 async function createProducts() {
     console.log("Debug: Creating Products");
-    await ProductCreate('Product 1', 'Description 1', 100, [VariantArray[0], VariantArray[1]]);
-    await ProductCreate('Product 2', 'Description 2', 200, [VariantArray[2], VariantArray[3]]);
-    await ProductCreate('Product 3', 'Description 3', 300, [VariantArray[4]]);
+    await ProductCreate('Product 4', 'Description 1', 100, [VariantArray[0], VariantArray[1]]);
+    await ProductCreate('Product 5', 'Description 2', 200, [VariantArray[2], VariantArray[3]]);
+    await ProductCreate('Product 6', 'Description 3', 300, [VariantArray[4]]);
+    console.log( [VariantArray[0], VariantArray[1]]);
     console.log("Debug: Products created");
 }
 

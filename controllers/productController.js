@@ -43,7 +43,7 @@ exports.create_post = [
 ];
 
 exports.delete_get = asyncHandler(async function(req, res, next) {
-    const variant = await Variant.find({ product: req.params.id })
+    const variant = await Product.find({ product: req.params.id })
     res.json(variant);
 });
 
